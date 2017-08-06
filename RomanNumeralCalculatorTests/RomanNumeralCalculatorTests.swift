@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import RomanNumeralCalculator
 
 class RomanNumeralCalculatorTests: XCTestCase {
     
@@ -18,6 +19,13 @@ class RomanNumeralCalculatorTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testToRoman() {
+        XCTAssertEqual(toRoman(1), "I")
+        XCTAssertEqual(toRoman(2), "II")
+        XCTAssertEqual(toRoman(3), "III")
+        XCTAssertEqual(toRoman(4), "IV")
     }
     
     func testExample() {
